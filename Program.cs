@@ -49,7 +49,11 @@
             {
                 if (inp != "sum")
                 {
-                    list.Add(int.Parse(inp));
+                    int a;
+                    if (int.TryParse(inp, out a))
+                    {
+                        list.Add(a);
+                    }
                 }
                 else
                 {
@@ -58,6 +62,7 @@
                         sum += i;
                     }
                     Console.WriteLine(sum);
+                    sum = 0;
                 }
                 inp = Console.ReadLine();
             }
