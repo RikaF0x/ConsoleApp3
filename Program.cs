@@ -34,8 +34,11 @@
         }
         static int[] Task3 (int[] mas)
         {
-            Array.Sort(mas);
-            return mas;
+            int[] mas1 = new int[mas.Length];
+            Array.Copy(mas, mas1, mas.Length);
+            Array.Sort(mas1);
+            Array.Reverse(mas1);
+            return mas1;
         }
         static void Task4()
         {
